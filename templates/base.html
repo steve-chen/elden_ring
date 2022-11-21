@@ -1,24 +1,37 @@
-<!doctype html>
-<title>Elden Ring Database</title>
+<html>
+	<!doctype html>
+	<head>
+		<title>Jayden's Homepage</title>
+		<link rel="stylesheet" href="/css/main.css">
 
-<h1>Information about Elden Ring: {% block title %}{% endblock %}</h1>
+	</head>
+	<body>
+		{% block header %} 
+		<h1>Jayden's Website</h1>
+		<ul class="main-nav">
+			<li><a href="/index.html">Home</a></li>   
+			<li><a href="/lightsaber.html">Lightsaber</a></li>
+			<li><a href="/trips.html">My Trips</a></li> 
+			<li><a href="/game.html">Snake Game</a></li>
+			<li><a href="/magic.html">Magic Exercises</a></li>
+			<li><a href="/ammos/">Elden Ring</a></li>
+		</ul>
+		{% endblock %}
 
-<a href="/ammos">ammos</a>&nbsp;|&nbsp;
-<a href="/monsters">monsters</a>&nbsp;|&nbsp;
-<a href="/weapons">weapons</a>
+		<h1>Information about Elden Ring: {% block title %}{% endblock %}</h1>
 
-<br/>
-<br/>
-<hr>
+		<a href="/ammos">ammos</a>&nbsp;|&nbsp;
+		<a href="/monsters">monsters</a>&nbsp;|&nbsp;
+		<a href="/weapons">weapons</a>
 
-{% block data %}
+		<br/>
+		<br/>
+		<hr>
 
-{% endblock %}
+		{% block data %}
 
+		{% endblock %}
 
-<!-- 
-	<form method="post">
-	Name: <input type="text" >
-	<input type="submit" name="Submit" value="Submit">
-</form>
--->
+	</body>
+</html>
+
