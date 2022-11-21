@@ -5,10 +5,9 @@ import elden_ring
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/home")
 @app.route("/index")
-def home():
-    return "Hello World!"
+def index():
+    return render_template("index.html")
 
 @app.route("/monsters/")
 @app.route("/monsters/<item_id>")
