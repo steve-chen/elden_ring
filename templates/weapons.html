@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Weapons{% endblock %}
+
+{% block data %}
+	{% if item %}
+	<b>Name:</b><{{ item['name'] }}<br>
+	<b>Image:</b><img width="400" src="{{ item['image'] }}"><br>
+	<b>Description:</b>{{ item['description'] }}<br>
+	<b>Attack:</b>{{ item['attack'] }}<br>
+
+	{% else %}
+	<ul>
+		{% for weapon in weapons['data'] %}
+		<li>
+			<b>{{ weapon['name'] }}</b><br/>
+			<img width="400" src="{{ weapon['image'] }}">
+			<a href="/weapons/{{weapon['id']}}">Details</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+{% endblock %}

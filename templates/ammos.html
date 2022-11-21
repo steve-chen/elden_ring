@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Ammos{% endblock %}
+{% block data %}
+	{% if item %}
+		{{ item }}
+	{% else %}
+		{% for arrow in arrows['data'] %}
+			<b>{{ arrow['name'] }}</b><br/>
+			<img width="400" src="{{ arrow['image'] }}">
+			<a href="/ammos/{{arrow['id']}}">Details</a>
+		{% endfor %}
+
+	{% endif %}
+
+{% endblock %}
